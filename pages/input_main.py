@@ -91,7 +91,7 @@ def predict_values(smiles, fingerprint, key):
 
     fingerprint_selected = fingerprint_key_list[fingerprint]
     model_selected = key_list[key]
-    location = f"Models\{fingerprint_selected}\{model_selected}{fingerprint_selected}.pkl.gz"
+    location = f".\Models\{fingerprint_selected}\{model_selected}{fingerprint_selected}.pkl.gz"
 
     with gzip.open(location, 'rb') as f:
         model = pickle.load(f)
@@ -117,7 +117,7 @@ def df_to_arr(dataframe, fingerprint):
 def predict_df_values(dataframe, model, fingerprint):
     fingerprint_selected = fingerprint_key_list[fingerprint]
     model_selected = key_list[model]
-    location = f"Models\{fingerprint_selected}\{model_selected}{fingerprint_selected}.pkl.gz"
+    location = f".\Models\{fingerprint_selected}\{model_selected}{fingerprint_selected}.pkl.gz"
 
     featurized_df = df_to_arr(dataframe, fingerprint)
     with gzip.open(location, 'rb') as f:
