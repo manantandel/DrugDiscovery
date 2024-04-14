@@ -1,4 +1,4 @@
-rdkit-pypi
+rdkit==2023.9.4
 streamlit==1.33.0
 deepchem==2.8.0
 stmol==0.0.9
