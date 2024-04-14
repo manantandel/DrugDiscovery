@@ -5,5 +5,5 @@ deepchem==2.8.0
 stmol==0.0.9
 matplotlib==3.7.2
 py3Dmol==2.1.0
-streamlit_option_menu==0.3.12
+streamlit-option-menu==0.3.12
 pandas==2.2.1
