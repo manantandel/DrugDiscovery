@@ -331,6 +331,8 @@ elif selected == "CSV Input":
     with st.expander("What file to upload?", expanded=False):
         st.subheader("What file to upload?")
         st.write("The file should be a Comma Seperated Value(CSV) file. The file should contain only a column of SMILES data.")
+        st.image("https://i.imgur.com/TdnXgIc.png")
+        
     uploaded_file = st.file_uploader("Choose a CSV file", accept_multiple_files=False, type=['.csv'])
     fingerprint_select = st.selectbox("Select Fingerprint", fingerprint_list, key='s2')
 
