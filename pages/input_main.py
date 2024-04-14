@@ -363,3 +363,8 @@ elif selected == "CSV Input":
                             mime='text/csv',
                             )
             
+st.write("""
+    <div style="display: flex; justify-content: center;">
+        <img src="https://i.imgur.com/N9XjzM2.jpeg" alt="Centered Image">
+    </div>
+""", unsafe_allow_html=True)

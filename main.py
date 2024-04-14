@@ -1,15 +1,4 @@
 import streamlit as st
-from rdkit import Chem
-from rdkit.Chem import Descriptors
-from urllib.request import urlopen
-from urllib.parse import quote
-import matplotlib.pyplot as plt
-from rdkit import Chem
-from rdkit.Chem import Draw
-import py3Dmol
-from stmol import showmol
-from rdkit.Chem import AllChem
-
 
 st.set_page_config(
     page_title="Drug Discovery",
@@ -18,12 +7,20 @@ st.set_page_config(
 
 st.write("""
     <div style="display: flex; justify-content: center;">
-        <img src="https://i.imgur.com/GUUScJH.jpg" alt="Centered Image">
+        <img src="https://i.imgur.com/DbxHi1L.jpeg" alt="Centered Image">
     </div>
 """, unsafe_allow_html=True)
+new_title = '<p style="text-align: center;font-family:Segoe UI Black; color:#6D59B9; font-size: 58px;">Multitask learning for Drug Solubility and Ligand Affinity prediction from SMILES</p>'
+st.markdown(new_title, unsafe_allow_html=True)
 
-st.title("Drug Discovery")
+
 st.sidebar.page_link("main.py", label="🏠 Home")
 st.sidebar.page_link("pages/input_main.py", label="🔠 Manual Input")
 st.sidebar.page_link("pages/compare.py", label="🆚 Compare")
 st.sidebar.page_link("pages/about.py", label="🔎 About")
+
+st.write("""
+    <div style="display: flex; justify-content: center;">
+        <img src="https://i.imgur.com/N9XjzM2.jpeg" alt="Centered Image">
+    </div>
+""", unsafe_allow_html=True)

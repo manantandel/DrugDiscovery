@@ -11,7 +11,6 @@ from stmol import showmol
 from rdkit.Chem import AllChem
 import deepchem as dc
 import pickle
-import pandas as pd
 import gzip
 
 model_list = ["AdaBoost", "Decision Tree", "Gradient Boosting", "Huber", "KNN", "Random Forest", "SVR", "XGBoost"]
@@ -156,6 +155,7 @@ with col1:
             file = open("analyzed_molecules.txt", "r")
             read_content = file.readlines()
             file.close()
+            read_content = set(read_content)
             ele_list = [ele for ele in read_content if not ele.isspace()]
             dropbox1 = st.selectbox('Select an element', ele_list, key="d1")
             smiles1 = dropbox1
@@ -218,6 +218,7 @@ with col2:
             file = open("analyzed_molecules.txt", "r")
             read_content = file.readlines()
             file.close()
+            read_content = set(read_content)
             ele_list = [ele for ele in read_content if not ele.isspace()]
             dropbox2 = st.selectbox('Select an element', ele_list, key="d2")
             smiles2 = dropbox2.rstrip("\n")
@@ -318,3 +319,9 @@ if subBut:
     c4.subheader("2D Visualization", divider="violet")
     plot_mol2 = draw_2d_molecule(smiles2)
     c4.pyplot(plot_mol2)
+
+st.write("""
+    <div style="display: flex; justify-content: center;">
+        <img src="https://i.imgur.com/N9XjzM2.jpeg" alt="Centered Image">
+    </div>
+""", unsafe_allow_html=True)
